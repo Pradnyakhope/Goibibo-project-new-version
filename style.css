@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.offers-container {
+    padding: 20px;
+}
+
+/* .arraow {
+    width: 100px;
+    height: 100px;
+    border: 1px solid blue;
+    border-radius: 50%;
+    line-height: 20px;
+} */
+
+.container1 {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.offers-header h2 {
+    margin: 0;
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.div1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.categories button {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.categories button:hover, .categories button.active {
+    background-color: #FF6600;
+    color: #fff;
+}
+
+.view-link a {
+    text-decoration: none;
+    color: #FF6600;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.view-link a:hover {
+    color: #e65c00;
+}
+
+.offers-cards {
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    justify-content: space-around;
+    overflow-x: scroll;
+    /* -webkit-overflow-scrolling: touch; */
+}
+.offers-cards::-webkit-scrollbar{
+    display: none;
+}
+
+.offer-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+}
+
+.offer-card img {
+    width: 100%;
+    height: auto;
+}
+
+.offer-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.offer-details h3 {
+    margin: 10px 0;
+    color: #FF6600;
+    font-size: 18px;
+}
+
+.offer-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.offer-details .validity {
+    font-size: 14px;
+    color: #888;
+}
+
+.sponsored-ad, .go-safe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.sponsored-ad p, .go-safe .para1 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.sponsored-ad img {
+    height: 100px;
+    border-radius: 10px;
+}
+
+.go-safe img{
+    height: 50px;
+}
+
+.go-safe a {
+    color: #FF6600;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.go-safe a:hover {
+    color: #e65c00;
+}
+
+.flight-routes-container {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.flight-routes-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.flight-routes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.route-column {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.route {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.route:hover {
+    transform: scale(1.05);
+}
+
+.route p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.route strong {
+    color: #333;
+}
+
+.route a {
+    color: #FF6600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.route a:hover {
+    color: #e65c00;
+}
+
+@media (max-width: 1200px) {
+    .offer-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-card {
+        width: 100%;
+    }
+
+    .div1 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .view-link {
+        margin-top: 10px;
+    }
+
+    .flight-routes {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .categories {
+        justify-content: center;
+    }
+
+    .categories button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
